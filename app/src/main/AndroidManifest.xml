@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.chatty"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -13,7 +16,8 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
@@ -23,14 +27,14 @@
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/Theme.AppCompat">
         <service
-            android:name="com.android.chatty.MessageService"
+            android:name=".MessageService"
             android:enabled="true" />
 
         <activity
-            android:name="com.android.chatty.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".Main_Page"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,40 +42,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.chatty.ChatActivity"
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ChatActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_chat"
-            android:launchMode="singleTop" >
-        </activity>
+            android:launchMode="singleTop" />
         <activity
-            android:name="com.android.chatty.ViewImageActivity"
+            android:name=".ViewImageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_view_image"
-            android:parentActivityName="com.android.chatty.ChatActivity"
-            android:theme="@style/FullscreenTheme" >
-        </activity>
+            android:parentActivityName=".ChatActivity"
+            android:theme="@style/FullscreenTheme" />
         <activity
-            android:name="com.android.chatty.RecordAudioActivity"
+            android:name=".RecordAudioActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_record_audio"
-            android:parentActivityName="com.android.chatty.ChatActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" >
-        </activity>
+            android:parentActivityName=".ChatActivity" />
         <activity
-            android:name="com.android.chatty.PlayVideoActivity"
-            android:label="@string/title_activity_play_video"
-            android:configChanges="orientation|keyboardHidden|screenSize" >
-        </activity>
+            android:name=".PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_play_video" />
         <activity
-            android:name="com.android.chatty.FilePickerActivity"
+            android:name=".FilePickerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_file_picker"
-            android:parentActivityName="com.android.chatty.ChatActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" >
-        </activity>
+            android:parentActivityName=".ChatActivity" />
         <activity
-            android:name="com.android.chatty.WebViewActivity"
+            android:name=".WebViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_web_view"
-            android:parentActivityName="com.android.chatty.ChatActivity" >
+            android:parentActivityName=".ChatActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -82,9 +84,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.chatty.DrawingActivity"
-            android:label="@string/title_activity_drawing" >
-        </activity>
+            android:name=".DrawingActivity"
+            android:label="@string/title_activity_drawing" />
+        <activity android:name=".B_Chat.B_Activity" />
     </application>
 
 </manifest>
