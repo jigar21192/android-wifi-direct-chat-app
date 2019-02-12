@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.chatty.R;
+import com.android.chatty.util.ActivityUtilities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,6 +88,7 @@ public class B_Activity extends AppCompatActivity {
         /*chatAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, chatMessages);
         listView.setAdapter(chatAdapter);*/
     }
+
 
     private Handler handler = new Handler(new Handler.Callback() {
 

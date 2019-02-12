@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.chatty.B_Chat.B_Activity;
+import com.android.chatty.util.ActivityUtilities;
 
 public class Main_Page extends AppCompatActivity {
 
@@ -36,4 +37,5 @@ public class Main_Page extends AppCompatActivity {
 
 
     }
+
 }
