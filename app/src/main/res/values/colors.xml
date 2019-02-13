@@ -6,6 +6,12 @@
     
     <color name="actionbar_background">#FFFFFF</color>
     <color name="actionbar_text">#535391</color>
+    <color name="layout_bg">#ff9e22</color>
+
+    <color name="primaryDark">#292b3d</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
     
     <color name="chat_text_background">#FFFFFF</color>
     <color name="chat_text_background_mine">#7980DB</color>    
