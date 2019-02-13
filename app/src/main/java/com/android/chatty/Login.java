@@ -1,7 +1,9 @@
 package com.android.chatty;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,15 +25,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Login extends AppCompatActivity {
-
+    public static final String ID = "id";
+    public static final String KEY_Email = "email";
+    public static final String MyPREFERENCES = "MyPrefs" ;
     TextView txt_login;
     EditText Email_id,Password;
     Button btn_login;
     private ProgressDialog progress;
     String L_URL="https://unalienable-attorne.000webhostapp.com/login.php";
-
+    SharedPreferences sharedpreferences;
     String v_email;
     String v_password;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,15 @@ public class Login extends AppCompatActivity {
         progress=new ProgressDialog(Login.this);
         progress.setMessage("Loading....");
         progress.setCancelable(false);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        if (sharedpreferences.contains(KEY_Email)) {
+            Intent intent = new Intent(getApplicationContext(),Main_Page.class);
+
+            startActivity(intent);
+            finish();
+        }
 
         btn_login.setOnClickListener(new View.OnClickListener()
             {
@@ -78,7 +92,15 @@ public class Login extends AppCompatActivity {
                               {
                                   {
                                       progress.dismiss();
+
+                                      SharedPreferences.Editor editor = sharedpreferences.edit();
+
+                                      editor.putString(KEY_Email, v_email );
+
+
+                                      editor.commit();
                                       Intent intent = new Intent(Login.this, Main_Page.class);
+
                                       startActivity(intent);
                                       finish();
                                   }

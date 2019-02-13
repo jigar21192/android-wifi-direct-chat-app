@@ -7,32 +7,53 @@
     tools:context=".Main_Page">
 
     <Button
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:background="@drawable/but_round"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
         android:id="@+id/bluetooth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="127dp"
-        android:layout_marginLeft="127dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="304dp"
         android:background="@drawable/but_round"
         android:drawableLeft="@drawable/ic_bluetooth_audio_black_24dp"
-        android:padding="45dp" />
+        android:padding="15dp" />
 
 
     <Button
         android:id="@+id/wifi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginTop="342dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="298dp"
         android:background="@drawable/but_round"
         android:drawableLeft="@drawable/ic_wifi_black_30dp"
-        android:padding="45dp" />
+        android:padding="15dp" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/bluetooth"
+
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-11dp"
+        android:background="@drawable/but_round"
+        android:drawableLeft="@drawable/ic_settings_black_30dp"
+        android:padding="15dp" />
+
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import com.android.chatty.util.ActivityUtilities;
 
 public class Main_Page extends AppCompatActivity {
 
-    Button blue,wifi;
+    Button blue,wifi,setting;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,14 @@ public class Main_Page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+      /*  setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main_Page.this,feedback.class);
+                startActivity(intent);
+            }
+        });*/
 
 
     }

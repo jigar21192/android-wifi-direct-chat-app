@@ -4,9 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -28,17 +27,22 @@
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme">
+        <activity android:name=".feedback"></activity>
+
         <service
             android:name=".MessageService"
             android:enabled="true" />
-<activity  android:name=".Main_Page"
-    android:theme="@style/Theme.AppCompat.Light"/>
-        <activity android:name=".Registration"
-            android:theme="@style/Theme.AppCompat.Light"/>
+
+        <activity
+            android:name=".Main_Page"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".Registration"
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name=".Login"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -90,9 +94,9 @@
         <activity
             android:name=".DrawingActivity"
             android:label="@string/title_activity_drawing" />
-        <activity android:name=".B_Chat.B_Activity"
-            android:theme="@style/Theme.AppCompat.Light"
-            />
+        <activity
+            android:name=".B_Chat.B_Activity"
+            android:theme="@style/Theme.AppCompat.Light" />
     </application>
 
 </manifest>
