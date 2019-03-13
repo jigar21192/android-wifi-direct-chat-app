@@ -3,6 +3,7 @@ package com.android.chatty;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.KeyguardManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -13,6 +14,8 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -37,6 +40,7 @@ public class FingarPrint_Auth extends AppCompatActivity {
     private static final String KEY_NAME = "androidHive";
     private Cipher cipher;
     private TextView textView;
+    //Button lo;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,7 @@ public class FingarPrint_Auth extends AppCompatActivity {
 
         // Check whether the device has a Fingerprint sensor.
         if(!fingerprintManager.isHardwareDetected()){
+
             /**
              * An error message will be displayed if the device does not contain the fingerprint hardware.
              * However if you plan to implement a default authentication method,

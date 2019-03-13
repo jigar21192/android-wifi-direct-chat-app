@@ -35,7 +35,7 @@ public class Main_Page extends AppCompatActivity {
             }
         });
 
-      /*  setting.setOnClickListener(new View.OnClickListener() {
+        /*setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Main_Page.this,feedback.class);
