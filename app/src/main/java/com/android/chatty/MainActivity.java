@@ -219,4 +219,11 @@ public class MainActivity extends Activity{
   		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
   		return prefs.getString("chatName", DEFAULT_CHAT_NAME);
   	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		Intent intent=new Intent(MainActivity.this,Main_Page.class);
+		startActivity(intent);
+	}
 }

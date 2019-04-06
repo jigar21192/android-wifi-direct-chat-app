@@ -40,7 +40,7 @@ public class FingarPrint_Auth extends AppCompatActivity {
     private static final String KEY_NAME = "androidHive";
     private Cipher cipher;
     private TextView textView;
-    //Button lo;
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
